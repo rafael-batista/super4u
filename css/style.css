@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+.ctnFlex{
+  display: flex;
+  justify-content: space-between;
+}
+div.divEsquerda {
+	width: 65%;
+	display: inline-block;
+	background:  url("../imagens/supermercado.jpg");
+	font-size: 3vw;
+	text-align: center;
+	padding: 5vw 0vw 5vw 0vw;
+	min-width:40vw;
+}
+
+div.divDireita {
+	margin-right: 0vw;
+	font-size: 3vw;
+	text-align: center;
+	padding: 5vw 0vw 5vw 0vw;
+    }
+
+.DivInterna {
+	margin-top: 30px;
+	width: 50%;
+	height: auto;
+	padding-top: 10px;
+	align-self: center;
+	margin-left: 25%;
+	background: #f8f8f8 0% 0% no-repeat padding-box;
+	box-shadow: -3px 3px 5px #00000029;
+	border-radius: 3px;
+	opacity: 1;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+
+.botaoSair {
+	color: #FF0000;
+	background-color: #ffffff;
+	width: 55px;
+	height: 25px;
+	font-weight: bold;
+}
+.botaoInterno {
+	margin-top: 0px;
+	margin-right: 5px;
+	margin-left: 5px;
+	font-size: 15px;
+	width: 150px;
+	height: 40px;
+	background: #FF0000 0% 0% no-repeat padding-box;
+	border-radius: 5px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	color: #FFFFFF;
+	margin-bottom: 25px;
+	border-color: #FF0000;
+}
+.tituloInterno {
+	font-size: 30px;
+	color: #4D4D4D;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-weight: 400;
+}
+
+.frameDireita{
+	width: 35%;
+	height: auto;
+	background-color: #FFFFFF;
+	
+}
+
+.divTopo{
+	background: #FF0000;
+
+}

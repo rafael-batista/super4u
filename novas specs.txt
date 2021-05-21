@@ -1,0 +1,25 @@
+1) Unidades de medida adicionadas aos produtos e matérias primas
+a) frontend (done)
+b) backend (crud e tabela/campo no banco)
+
+2) filiais (-- Estrutura da tabela filiais (ver tipos e nomes))
+id, descrição, cidade, estado, ocupacao, capacidade
+a) campo ocupacao em % refletindo a percentagem de ocupação baseado na capacidade
+
+3) produtos e mat-prima
+Associar, no cadastro, o produto e materia prima a uma filial que será responsável pelo armazemanamento
+
+4) Associar usuário a filial onde trabalha
+
+
+
+
+
+
+
+
+
+
+
+--------------
+Ver possibilidade de publicação (azure, aws, heroku, gcp)
