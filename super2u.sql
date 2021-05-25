@@ -136,19 +136,20 @@
     `idusuarios` int(11) NOT NULL,
     `usuario` varchar(45) NOT NULL,
     `senha` varchar(45) NOT NULL,
-    `perfil_usuario_id` int(11) NOT NULL
+    `perfil_usuario_id` int(11) NOT NULL,
+    `idFilial` int(11) NOT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
   --
   -- Extraindo dados da tabela `usuarios`
   --
 
-  INSERT INTO `usuarios` (`idusuarios`, `usuario`, `senha`, `perfil_usuario_id`) VALUES
-  (1, 'admin@super4u.com', 'a', 1),
-  (2, 'almoxarife@super4u.com', 'almoxarifeAsd123!.', 2),
-  (3, 'comprador@super4u.com', 'compradorAsd123!.', 3),
-  (4, 'engprod@super4u.com', 'engprodAsd123!.', 4),
-  (5, 'gerente@super4u.com', 'gerenteAsd123!.', 5);
+  INSERT INTO `usuarios` (`idusuarios`, `usuario`, `senha`, `perfil_usuario_id`, `idFilial`) VALUES
+  (1, 'admin@super4u.com', 'a', 1,1),
+  (2, 'almoxarife@super4u.com', 'almoxarifeAsd123!.', 2,2),
+  (3, 'comprador@super4u.com', 'compradorAsd123!.', 3,3),
+  (4, 'engprod@super4u.com', 'engprodAsd123!.', 4,4),
+  (5, 'gerente@super4u.com', 'gerenteAsd123!.', 5,5);
 
   -- --------------------------------------------------------
   --

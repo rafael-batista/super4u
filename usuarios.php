@@ -29,6 +29,7 @@ if (($resultado) and ($resultado->num_rows != 0)) {
 				<th>Login</th>
 				<!-- <th>ID Perfil</th> -->
 				<th>Perfil</th>
+				<th>Filial</th>			
 			</tr>
 		</thead>
 		<tbody>
@@ -51,6 +52,7 @@ if (($resultado) and ($resultado->num_rows != 0)) {
 					<td><?php echo $row['usuario']; ?></td>
 					<!-- <td><?php echo $row['perfil_usuario_id']; ?></td> -->
 					<td><?php echo $perfil; ?></td>
+					<td><?php echo $row['idFilial']; ?></td>
 					<td><?php echo "<a href='edit_usuarios.php?id=" . $row['idusuarios'] . "'>Editar</a>"; ?></td>
 					<td><?php echo "<a href='excluir_usuarios.php?id=" . $row['idusuarios'] . "'>Apagar</a>"; ?></td>
 				</tr>

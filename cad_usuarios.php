@@ -35,7 +35,7 @@ session_start();
 				<td> <label>Filial: </label></td>
 				<td>
 					<p>
-						<select name="filial_id">
+						<select type="number"  name="filial_id">
 							<option value="1">Curitiba</option>
 							<option value="2">São José dos Pinhais</option>
 							<option value="3">Pato Branco</option>
