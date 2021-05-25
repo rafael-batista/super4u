@@ -37,7 +37,11 @@ session_start();
 					<p>
 						<select name="filial_id">
 							<option value="1">Curitiba</option>
-							<option value="2">Pinhais</option>
+							<option value="2">São José dos Pinhais</option>
+							<option value="3">Pato Branco</option>
+							<option value="4">Londrina</option>
+							<option value="5">Paranaguá</option>
+							<option value="6">Ponta Grossa</option>
 						</select>
 					</p>
 				</td>
