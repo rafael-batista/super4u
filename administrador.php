@@ -33,6 +33,15 @@
 		function defineConsultaMateriaPrimaIframe(){
     	document.getElementById("mainFrame").src = "materiaprima.php"; 
   		}
+
+		  function defineCadastroFilialframe(){
+    	document.getElementById("mainFrame").src = "cad_filiais.php"; 
+  		}
+
+		  function defineConsultaFiliaisIframe(){
+    	document.getElementById("mainFrame").src = "filiais.php"; 
+  		}
+		  
 	</script>
 </head>
 <body>
@@ -77,6 +86,8 @@
   					<input type="button" class="botaoInterno" onclick="defineCadastroUsuarioIframe()" value="Usuários" />
 				<a href="#" onclick="defineCadastroMateriaPrimaIframe();return false;"></a> 
   					<input type="button" class="botaoInterno" onclick="defineCadastroMateriaPrimaIframe()" value="Matérias-primas" />
+				<a href="#" onclick="defineCadastroFilialframe();return false;"></a> 
+  					<input type="button" class="botaoInterno" onclick="defineCadastroFilialframe()" value="Filiais" />
 			</div>
 			<div align="center" class="DivInterna">
 				<Center class="tituloInterno">Consulta de Usuário</Center>
@@ -91,6 +102,8 @@
   					<input type="button" class="botaoInterno" onclick="defineConsultaProdutoIframe()" value="Produtos" />
 				<a href="#" onclick="defineConsultaMateriaPrimaIframe();return false;"></a> 
   					<input type="button" class="botaoInterno" onclick="defineConsultaMateriaPrimaIframe()" value="Matérias-primas" />
+				<a href="#" onclick="defineConsultaFiliaisIframe();return false;"></a> 
+  					<input type="button" class="botaoInterno" onclick="defineConsultaFiliaisIframe()" value="Filiais" />
 			</div>
 		</div>
 		<iframe id="mainFrame" class="frameDireita"></iframe>

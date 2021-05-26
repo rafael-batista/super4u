@@ -35,6 +35,19 @@ $row_usuarios = mysqli_fetch_assoc($resultado_usuarios);
 						</select>
 					</p>
 				</td>
+				<td> <label>Filial: </label></td>
+				<td>
+					<p>
+						<select name="filial_id">
+							<option value="1">Curitiba</option>
+							<option value="2">São José dos Pinhais</option>
+							<option value="3">Pato Branco</option>
+							<option value="4">Londrina</option>
+							<option value="5">Paranaguá</option>
+							<option value="6">Ponta Grossa</option>
+						</select>
+					</p>
+				</td>
 			</tr>
 		</table><br>
 		<table border=0 align=center>
