@@ -7,7 +7,7 @@ $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_STRING);
 $quantidade = filter_input(INPUT_POST, 'ocupacao', FILTER_SANITIZE_NUMBER_INT);
 $capacidade = filter_input(INPUT_POST, 'capacidade', FILTER_SANITIZE_NUMBER_INT);
 
-$result_produtos = "UPDATE filiais SET descricao='$descricao', ocupacao='$quantidade', capacidade='$capacidade' WHERE idFilial='$id'";
+$result_produtos = "UPDATE filiais SET descricao='$descricao', ocupacao='$quantidade', capacidade='$capacidade' WHERE idfilial='$id'";
 
 $resultado_produtos = mysqli_query($conn, $result_produtos);
 

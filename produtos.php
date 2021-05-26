@@ -43,7 +43,7 @@ if (($resultado) and ($resultado->num_rows != 0)) {
 					<th><?php echo $row['idprodutos']; ?></th>
 					<td><?php echo $row['descricao']; ?></td>
 					<td><?php echo $row['quantidade']; ?></td>		
-					<td><?php echo $row['idFilial']; ?></td>			
+					<td><?php echo $row['idfilial']; ?></td>			
 					<td><?php echo "<a href='edit_produtos.php?id=" . $row['idprodutos'] . "'>Editar</a>"; ?></td>
 					<td><?php echo "<a href='excluir_produtos.php?id=" . $row['idprodutos'] . "'>Apagar</a>"; ?></td>
 				</tr>

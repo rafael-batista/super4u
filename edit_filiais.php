@@ -2,7 +2,7 @@
 session_start();
 include_once("conexao.php");
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
-$result_produtos = "SELECT * FROM filiais WHERE idFilial = '$id'";
+$result_produtos = "SELECT * FROM filiais WHERE idfilial = '$id'";
 $resultado_produtos = mysqli_query($conn, $result_produtos);
 $row_produtos = mysqli_fetch_assoc($resultado_produtos);
 ?>
@@ -19,7 +19,7 @@ $row_produtos = mysqli_fetch_assoc($resultado_produtos);
 		<table border=0 align=center>
 			<tr>
 				<th><label>ID: </label></th>
-				<td><input readonly type="number" name="id" value="<?php echo $row_produtos['idFilial']; ?>"></td>
+				<td><input readonly type="number" name="id" value="<?php echo $row_produtos['idfilial']; ?>"></td>
 				<td><label>Descrição: </label></td>
 				<td><input type="text" name="descricao" placeholder="Digite a descrição" value="<?php echo $row_produtos['descricao']; ?>"></td><br><br>
 				<td> <label>Ocupação: </label></td>

@@ -5,9 +5,9 @@ include_once("conexao.php");
 $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
 $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_STRING);
 $quantidade = filter_input(INPUT_POST, 'quantidade', FILTER_SANITIZE_NUMBER_INT);
-$idFilial = filter_input(INPUT_POST, 'idFilial', FILTER_SANITIZE_NUMBER_INT);
+$idfilial = filter_input(INPUT_POST, 'idfilial', FILTER_SANITIZE_NUMBER_INT);
 
-$result_produtos = "UPDATE produtos SET descricao='$descricao', quantidade='$quantidade', idFilial='$idFilial' WHERE idprodutos='$id'";
+$result_produtos = "UPDATE produtos SET descricao='$descricao', quantidade='$quantidade', idfilial='$idfilial' WHERE idprodutos='$id'";
 
 $resultado_produtos = mysqli_query($conn, $result_produtos);
 

@@ -27,7 +27,7 @@ $row_produtos = mysqli_fetch_assoc($resultado_produtos);
 				<td> <label>Filial: </label></td>
 				<td>
 					<p>
-						<select type="number" name="idFilial">
+						<select type="number" name="idfilial">
 							<option value="1">Curitiba</option>
 							<option value="2">São José dos Pinhais</option>
 							<option value="3">Pato Branco</option>

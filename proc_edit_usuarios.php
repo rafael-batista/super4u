@@ -5,9 +5,9 @@ include_once("conexao.php");
 $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
 $usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_STRING);
 $perfil_usuario_id = filter_input(INPUT_POST, 'perfil_usuario_id', FILTER_SANITIZE_NUMBER_INT);
-$idFilial = filter_input(INPUT_POST, 'filial_id', FILTER_SANITIZE_NUMBER_INT);
+$idfilial = filter_input(INPUT_POST, 'filial_id', FILTER_SANITIZE_NUMBER_INT);
 
-$result_usuarios = "UPDATE usuarios SET usuario='$usuario', perfil_usuario_id='$perfil_usuario_id', idFilial='$idFilial' WHERE idusuarios='$id'";
+$result_usuarios = "UPDATE usuarios SET usuario='$usuario', perfil_usuario_id='$perfil_usuario_id', idfilial='$idfilial' WHERE idusuarios='$id'";
 
 $resultado_usuarios = mysqli_query($conn, $result_usuarios);
 

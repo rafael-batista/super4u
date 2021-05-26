@@ -20,7 +20,7 @@ $pagina_atual = filter_input(INPUT_GET, 'pagina', FILTER_SANITIZE_NUMBER_INT);
 $pagina = (!empty($pagina_atual)) ? $pagina_atual : 1;
 
 //consultar no banco de dados
-$result = "SELECT * FROM filiais ORDER BY idFilial ASC;";
+$result = "SELECT * FROM filiais ORDER BY idfilial ASC;";
 $resultado = mysqli_query($conn, $result);
 
 //Verificar se encontrou resultado na tabela "usuarios"
@@ -40,12 +40,12 @@ if (($resultado) and ($resultado->num_rows != 0)) {
 			while ($row = mysqli_fetch_assoc($resultado)) {
 			?>
 				<tr>
-					<th><?php echo $row['idFilial']; ?></th>
+					<th><?php echo $row['idfilial']; ?></th>
 					<td><?php echo $row['descricao']; ?></td>
 					<td><?php echo $row['ocupacao']; ?></td>		
 					<td><?php echo $row['capacidade']; ?></td>			
-					<td><?php echo "<a href='edit_filiais.php?id=" . $row['idFilial'] . "'>Editar</a>"; ?></td>
-					<td><?php echo "<a href='excluir_filiais.php?id=" . $row['idFilial'] . "'>Apagar</a>"; ?></td>
+					<td><?php echo "<a href='edit_filiais.php?id=" . $row['idfilial'] . "'>Editar</a>"; ?></td>
+					<td><?php echo "<a href='excluir_filiais.php?id=" . $row['idfilial'] . "'>Apagar</a>"; ?></td>
 				</tr>
 			<?php
 			} ?>
