@@ -48,13 +48,13 @@
 
   -- Estrutura da tabela filiais (ver tipos e nomes)
   CREATE TABLE `filiais` (
-    `idFilial` INT(11) AUTO_INCREMENT NOT NULL,
+    `idfilial` INT(11) NOT NULL,
     `descricao` varchar(100) NULL,
     `ocupacao` FLOAT NULL,
     `capacidade` FLOAT NULL
   )ENGINE=InnoDB;
 
-  INSERT INTO `filiais` (`idFilial`, `descricao`, `ocupacao`, `capacidade`) VALUES
+  INSERT INTO `filiais` (`idfilial`, `descricao`, `ocupacao`, `capacidade`) VALUES
   (1, 'Curitiba - Paraná', '0', '100000'),
   (2, 'São José dos Pinhais', '0', '200000'),
   (3, 'Pato Branco', '0', '900'),
@@ -93,14 +93,14 @@
     `idprodutos` int(11) NOT NULL,
     `descricao` varchar(45) NOT NULL,
     `quantidade` float NOT NULL,
-    `idFilial` float NOT NULL
+    `idfilial` int(11) NOT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
   --
   -- Extraindo dados da tabela `produtos`
   --
 
-  INSERT INTO `produtos` (`idprodutos`, `descricao`, `quantidade`,  `idFilial`) VALUES
+  INSERT INTO `produtos` (`idprodutos`, `descricao`, `quantidade`,  `idfilial`) VALUES
   (1, 'Grampos de roupa', '50000', 1),
   (2, 'Vassoura', '10000', 2),
   (3, 'Vassoura', '10000', 4);
@@ -137,19 +137,19 @@
     `usuario` varchar(45) NOT NULL,
     `senha` varchar(45) NOT NULL,
     `perfil_usuario_id` int(11) NOT NULL,
-    `idFilial` int(11) NOT NULL
+    `idfilial` int(11) NOT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
   --
   -- Extraindo dados da tabela `usuarios`
   --
 
-  INSERT INTO `usuarios` (`idusuarios`, `usuario`, `senha`, `perfil_usuario_id`, `idFilial`) VALUES
-  (1, 'admin@super4u.com', 'a', 1,1),
-  (2, 'almoxarife@super4u.com', 'almoxarifeAsd123!.', 2,2),
-  (3, 'comprador@super4u.com', 'compradorAsd123!.', 3,3),
-  (4, 'engprod@super4u.com', 'engprodAsd123!.', 4,4),
-  (5, 'gerente@super4u.com', 'gerenteAsd123!.', 5,5);
+  INSERT INTO `usuarios` (`idusuarios`, `usuario`, `senha`, `perfil_usuario_id`, `idfilial`) VALUES
+  (1, 'admin@super4u.com', 'a', 1, 1),
+  (2, 'almoxarife@super4u.com', 'almoxarifeAsd123!.', 2, 2),
+  (3, 'comprador@super4u.com', 'compradorAsd123!.', 3, 3),
+  (4, 'engprod@super4u.com', 'engprodAsd123!.', 4, 4),
+  (5, 'gerente@super4u.com', 'gerenteAsd123!.', 5, 5);
 
   -- --------------------------------------------------------
   --
@@ -167,6 +167,12 @@
   --
   ALTER TABLE `perfil_usuario`
     ADD PRIMARY KEY (`idperfil_usuario`);
+
+  --
+  -- Índices para tabela `filiais`
+  --
+  ALTER TABLE `filiais`
+    ADD PRIMARY KEY (`idfilial`);
 
   --
   -- Índices para tabela `produtos`
@@ -212,6 +218,12 @@
     MODIFY `idprodutos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
   --
+  -- AUTO_INCREMENT de tabela `filiais`
+  --
+  ALTER TABLE `filiais`
+    MODIFY `idfilial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+  --
   -- AUTO_INCREMENT de tabela `usuarios`
   --
   ALTER TABLE `usuarios`
@@ -221,6 +233,11 @@
   -- Restrições para despejos de tabelas
   --
 
+  --
+  -- Limitadores para a tabela `produtos`
+  --
+  ALTER TABLE `produtos`
+    ADD CONSTRAINT `fk_produtos_idfilial` FOREIGN KEY (`idfilial`) REFERENCES `filiais` (`idfilial`) ON DELETE NO ACTION ON UPDATE NO ACTION;
   --
   -- Limitadores para a tabela `produtos_x_materia_prima`
   --
@@ -233,6 +250,7 @@
   --
   ALTER TABLE `usuarios`
     ADD CONSTRAINT `fk_usuarios_perfil_usuario` FOREIGN KEY (`perfil_usuario_id`) REFERENCES `perfil_usuario` (`idperfil_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+   -- ADD CONSTRAINT `fk_usuarios_idfilial` FOREIGN KEY (`idfilial`) REFERENCES `filiais` (`idfilial`);
   COMMIT;
 
   /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
