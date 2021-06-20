@@ -19,7 +19,20 @@ session_start();
 				<td><label>Descrição: </label></td>
 				<td><input type="text" name="descricao" placeholder="Digite a descrição"></td><br><br>
 				<td> <label>Quantidade: </label></td>
-				<td> <input type="number" name="quantidade" placeholder="Digite a quantidade"></td><br><br>
+				<td> <input type="number" step="0.01" name="quantidade" placeholder="Digite a quantidade"></td><br><br>
+				<td> <label>Unidade: </label></td>
+				<td>
+					<p>
+						<select name="unidade_id">
+							<option value="1">Kg</option>
+							<option value="2">Litros</option>
+							<option value="3">Unidades</option>
+							<option value="4">Caixas</option>
+							<option value="5">Potes</option>
+							<option value="6">Frascos</option>
+						</select>
+					</p>
+				</td>
 				<td> <label>Filial: </label></td>
 				<td>
 					<p>

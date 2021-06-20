@@ -4,7 +4,7 @@ include_once("conexao.php");
 session_start();
 
 $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_STRING);
-$quantidade = filter_input(INPUT_POST, 'quantidade', FILTER_SANITIZE_NUMBER_INT);
+$quantidade = filter_input(INPUT_POST, 'quantidade', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
 $idfilial = filter_input(INPUT_POST, 'filial_id', FILTER_SANITIZE_NUMBER_INT);
 $capacidadeDisponivel = 0;
 
@@ -36,8 +36,8 @@ if ($capacidadeDisponivel < $quantidade) {
 	
 	//Exibe mensagem
 	if(mysqli_insert_id($conn)){
-	echo '<script>alert("Cadastro realizado com sucesso!"); </script>';
-		//header("Location: produtos.php");
+		echo '<script>alert("Cadastro realizado com sucesso!"); </script>';
+		// header("Location: cad_produtos.php");
 	} else {
 		echo '<script>alert("Ocorreu um erro!"); </script>';
 	//	header("Location: cad_produtos.php");

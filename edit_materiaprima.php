@@ -23,7 +23,7 @@ $row_materiaprima = mysqli_fetch_assoc($resultado_materiaprima);
 				<td><label>Descrição: </label></td>
 				<td><input type="text" name="descricao" placeholder="Digite a descrição" value="<?php echo $row_materiaprima['descricao']; ?>"></td><br><br>
 				<td> <label>Quantidade: </label></td>
-				<td> <input type="number" name="quantidade" placeholder="Digite a quantidade" value="<?php echo $row_materiaprima['quantidade']; ?>"></td><br><br>
+				<td> <input type="number" name="quantidade" step="0.01" placeholder="Digite a quantidade" value="<?php echo $row_materiaprima['quantidade']; ?>"></td><br><br>
 			</tr>
 		</table><br>
 		<table border=0 align=center>

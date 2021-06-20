@@ -23,7 +23,7 @@ $row_produtos = mysqli_fetch_assoc($resultado_produtos);
 				<td><label>Descrição: </label></td>
 				<td><input type="text" name="descricao" placeholder="Digite a descrição" value="<?php echo $row_produtos['descricao']; ?>"></td><br><br>
 				<td> <label>Quantidade: </label></td>
-				<td> <input type="number" name="quantidade" placeholder="Digite a quantidade" value="<?php echo $row_produtos['quantidade']; ?>"></td><br><br>
+				<td> <input type="number" step="0.01" name="quantidade" placeholder="Digite a quantidade" value="<?php echo $row_produtos['quantidade']; ?>"></td><br><br>
 				<td> <label>Filial: </label></td>
 				<td>
 					<p>

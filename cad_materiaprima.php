@@ -19,7 +19,7 @@ session_start();
 				<td><label>Descrição: </label></td>
 				<td><input type="text" name="descricao" placeholder="Digite a descrição"></td><br><br>
 				<td> <label>Quantidade: </label></td>
-				<td> <input type="number" name="quantidade" placeholder="Digite a quantidade"></td><br><br>
+				<td> <input type="number" step="0.01" name="quantidade" placeholder="Digite a quantidade"></td><br><br>
 				<td> <label>Unidade: </label></td>
 				<td>
 					<p>

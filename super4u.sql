@@ -26,11 +26,13 @@
   --
   -- Estrutura da tabela `materia_prima`
   --
+  CREATE SCHEMA super4u;
+  USE super4u;
 
   CREATE TABLE `materia_prima` (
     `idmateriaprima` int(11) NOT NULL,
     `descricao` varchar(45) NOT NULL,
-    `quantidade` float NOT NULL
+    `quantidade` float(10,2) NOT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
   --
@@ -50,8 +52,8 @@
   CREATE TABLE `filiais` (
     `idfilial` INT(11) NOT NULL,
     `descricao` varchar(100) NULL,
-    `ocupacao` FLOAT NULL,
-    `capacidade` FLOAT NULL
+    `ocupacao` float(10,2) NULL,
+    `capacidade` float(10,2) NULL
   )ENGINE=InnoDB;
 
   INSERT INTO `filiais` (`idfilial`, `descricao`, `ocupacao`, `capacidade`) VALUES
@@ -92,7 +94,7 @@
   CREATE TABLE `produtos` (
     `idprodutos` int(11) NOT NULL,
     `descricao` varchar(45) NOT NULL,
-    `quantidade` float NOT NULL,
+    `quantidade` float(10,2) NOT NULL,
     `idfilial` int(11) NOT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
