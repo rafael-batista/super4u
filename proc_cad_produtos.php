@@ -5,6 +5,7 @@ session_start();
 
 $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_STRING);
 $quantidade = filter_input(INPUT_POST, 'quantidade', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+$unidade = filter_input(INPUT_POST, 'unidade', FILTER_SANITIZE_STRING);
 $idfilial = filter_input(INPUT_POST, 'filial_id', FILTER_SANITIZE_NUMBER_INT);
 $capacidadeDisponivel = 0;
 
@@ -31,7 +32,7 @@ if ($capacidadeDisponivel < $quantidade) {
 	$resultado_update = mysqli_query($conn, $result_update);
 
 	//Insere produto
-	$result_produtos = "INSERT INTO produtos (descricao, quantidade, idfilial) VALUES ('$descricao', '$quantidade', $idfilial)";
+	$result_produtos = "INSERT INTO produtos (descricao, quantidade, unidade, idfilial) VALUES ('$descricao', '$quantidade', '$unidade', $idfilial)";
 	$resultado_produtos = mysqli_query($conn, $result_produtos);
 	
 	//Exibe mensagem

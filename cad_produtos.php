@@ -23,13 +23,13 @@ session_start();
 				<td> <label>Unidade: </label></td>
 				<td>
 					<p>
-						<select name="unidade_id">
-							<option value="1">Kg</option>
-							<option value="2">Litros</option>
-							<option value="3">Unidades</option>
-							<option value="4">Caixas</option>
-							<option value="5">Potes</option>
-							<option value="6">Frascos</option>
+						<select name="unidade">
+							<option value="Kg">Kg</option>
+							<option value="Litros">Litros</option>
+							<option value="Unidades">Unidades</option>
+							<option value="Caixas">Caixas</option>
+							<option value="Potes">Potes</option>
+							<option value="Frascos">Frascos</option>
 						</select>
 					</p>
 				</td>

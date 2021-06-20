@@ -24,6 +24,32 @@ $row_materiaprima = mysqli_fetch_assoc($resultado_materiaprima);
 				<td><input type="text" name="descricao" placeholder="Digite a descrição" value="<?php echo $row_materiaprima['descricao']; ?>"></td><br><br>
 				<td> <label>Quantidade: </label></td>
 				<td> <input type="number" name="quantidade" step="0.01" placeholder="Digite a quantidade" value="<?php echo $row_materiaprima['quantidade']; ?>"></td><br><br>
+				<td> <label>Unidade: </label></td>
+				<td>
+					<p>
+						<select name="unidade">
+							<option value="Kg">Kg</option>
+							<option value="Litros">Litros</option>
+							<option value="Unidades">Unidades</option>
+							<option value="Caixas">Caixas</option>
+							<option value="Potes">Potes</option>
+							<option value="Frascos">Frascos</option>
+						</select>
+					</p>
+				</td>
+				<td> <label>Filial: </label></td>
+				<td>
+					<p>
+						<select type="number" name="idfilial">
+							<option value="1">Curitiba</option>
+							<option value="2">São José dos Pinhais</option>
+							<option value="3">Pato Branco</option>
+							<option value="4">Londrina</option>
+							<option value="5">Paranaguá</option>
+							<option value="6">Ponta Grossa</option>
+						</select>
+					</p>
+				</td>
 			</tr>
 		</table><br>
 		<table border=0 align=center>

@@ -5,8 +5,9 @@ include_once("conexao.php");
 $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
 $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_STRING);
 $quantidade = filter_input(INPUT_POST, 'quantidade', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+$unidade = filter_input(INPUT_POST, 'unidade', FILTER_SANITIZE_STRING);
 
-$result_materiaprima = "UPDATE materia_prima SET descricao='$descricao', quantidade='$quantidade' WHERE idmateriaprima='$id'";
+$result_materiaprima = "UPDATE materia_prima SET descricao='$descricao', quantidade='$quantidade', unidade='$unidade' WHERE idmateriaprima='$id'";
 
 $resultado_materiaprima = mysqli_query($conn, $result_materiaprima);
 

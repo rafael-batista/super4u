@@ -32,18 +32,20 @@
   CREATE TABLE `materia_prima` (
     `idmateriaprima` int(11) NOT NULL,
     `descricao` varchar(45) NOT NULL,
-    `quantidade` float(10,2) NOT NULL
+    `quantidade` float(10,2) NOT NULL,
+    `unidade` varchar(45) NOT NULL
+
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
   --
   -- Extraindo dados da tabela `materia_prima`
   --
 
-  INSERT INTO `materia_prima` (`idmateriaprima`, `descricao`, `quantidade`) VALUES
-  (1, 'Clipe metálico para grampo de madeira', '45000'),
-  (2, 'Faces para grampo de madeira', '93000'),
-  (3, 'Cabo para vassoura', '6000'),
-  (4, 'Cerdas para vassoura', '12000');
+  INSERT INTO `materia_prima` (`idmateriaprima`, `descricao`, `quantidade`, `unidade`) VALUES
+  (1, 'Clipe metálico para grampo de madeira', '45000', 'Unidades'),
+  (2, 'Faces para grampo de madeira', '93000', 'Unidades'),
+  (3, 'Cabo para vassoura', '6000', 'Unidades'),
+  (4, 'Cerdas para vassoura', '12000', 'Unidades');
 
   -- --------------------------------------------------------
 
@@ -95,6 +97,7 @@
     `idprodutos` int(11) NOT NULL,
     `descricao` varchar(45) NOT NULL,
     `quantidade` float(10,2) NOT NULL,
+    `unidade` varchar(45) NOT NULL,
     `idfilial` int(11) NOT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -102,10 +105,10 @@
   -- Extraindo dados da tabela `produtos`
   --
 
-  INSERT INTO `produtos` (`idprodutos`, `descricao`, `quantidade`,  `idfilial`) VALUES
-  (1, 'Grampos de roupa', '50000', 1),
-  (2, 'Vassoura', '10000', 2),
-  (3, 'Vassoura', '10000', 4);
+  INSERT INTO `produtos` (`idprodutos`, `descricao`, `quantidade`,  `idfilial`, `unidade`) VALUES
+  (1, 'Grampos de roupa', '50000', 1, 'Unidades'),
+  (2, 'Vassoura', '10000', 2, 'Unidades'),
+  (3, 'Vassoura', '10000', 4, 'Unidades');
 
   -- --------------------------------------------------------
 
