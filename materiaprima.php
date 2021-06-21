@@ -30,6 +30,7 @@ if (($resultado) and ($resultado->num_rows != 0)) {
 			<tr>
 				<th>ID da Matéria-Prima</th>
 				<th>Descrição</th>
+				<th>Unidade</th>
 				<th>Quantidade</th>
 			</tr>
 		</thead>
@@ -41,6 +42,7 @@ if (($resultado) and ($resultado->num_rows != 0)) {
 					<th><?php echo $row['idmateriaprima']; ?></th>
 					<td><?php echo $row['descricao']; ?></td>
 					<td><?php echo $row['quantidade']; ?></td>
+					<td><?php echo $row['unidade']; ?></td>
 					<td><?php echo "<a href='edit_materiaprima.php?id=" . $row['idmateriaprima'] . "'>Editar</a>";?></td>
 					<td><?php echo "<a href='excluir_materiaprima.php?id=" . $row['idmateriaprima'] . "'>Apagar</a>";?></td>
 				</tr>
